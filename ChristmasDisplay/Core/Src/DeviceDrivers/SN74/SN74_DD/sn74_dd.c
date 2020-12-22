@@ -5,11 +5,10 @@
  *      Author: ryan
  */
 
-#include "sn74_dd.h"
-
 #include <stdio.h>
 #include <stdlib.h>
 #include "stm32f3xx_hal.h"
+#include "sn74_dd.h"
 
 #define SN74_SPI_INTERFACE SPI2
 #define SN74_RCLK_PORT GPIOB

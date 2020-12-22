@@ -8,7 +8,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "sn74_api.h"
-#include "sn74_dd.h"
+#include "../SN74_DD/sn74_dd.h"
 
 BaseType_t SN74PowerOn( void )
 {
