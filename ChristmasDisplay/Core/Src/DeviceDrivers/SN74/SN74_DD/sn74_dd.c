@@ -1,5 +1,5 @@
 /*
- * sn74hc595_dd.c
+ * sn74_dd.c
  *
  *  Created on: Dec 21, 2020
  *      Author: ryan
@@ -9,6 +9,8 @@
 #include <stdlib.h>
 #include "stm32f3xx_hal.h"
 #include "sn74_dd.h"
+#include "task.h"
+#include "queue.h"
 
 #define SN74_SPI_INTERFACE SPI2
 #define SN74_RCLK_PORT GPIOB

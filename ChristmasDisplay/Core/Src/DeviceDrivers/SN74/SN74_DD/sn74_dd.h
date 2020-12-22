@@ -1,5 +1,5 @@
 /*
- * sn74hc595_dd.h
+ * sn74_dd.h
  *
  *  Created on: Dec 21, 2020
  *      Author: ryan
@@ -10,8 +10,6 @@
 
 #include <stdint.h>
 #include "FreeRTOS.h"
-#include "task.h"
-#include "queue.h"
 
 typedef enum SN74CommandType
 {

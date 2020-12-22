@@ -1,5 +1,5 @@
 /*
- * sn74hc595_api.h
+ * sn74_api.h
  *
  *  Created on: Dec 21, 2020
  *      Author: ryan
