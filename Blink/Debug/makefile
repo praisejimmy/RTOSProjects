@@ -8,11 +8,7 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
--include Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/subdir.mk
--include Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/subdir.mk
--include Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/subdir.mk
--include Middlewares/Third_Party/FreeRTOS/Source/subdir.mk
--include Drivers/STM32F3xx_HAL_Driver/Src/subdir.mk
+-include Drivers/STM32L4xx_HAL_Driver/Src/subdir.mk
 -include Core/Startup/subdir.mk
 -include Core/Src/subdir.mk
 -include subdir.mk
@@ -58,8 +54,8 @@ all: main-build
 main-build: Blink.elf secondary-outputs
 
 # Tool invocations
-Blink.elf: $(OBJS) $(USER_OBJS) /home/ryan/Documents/Projects/RTOSProjects/Blink/STM32F302R8TX_FLASH.ld
-	arm-none-eabi-gcc -o "Blink.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/ryan/Documents/Projects/RTOSProjects/Blink/STM32F302R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Blink.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Blink.elf: $(OBJS) $(USER_OBJS) /home/ryan/Documents/Projects/RTOSProjects/Blink/STM32L476RGTX_FLASH.ld
+	arm-none-eabi-gcc -o "Blink.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/ryan/Documents/Projects/RTOSProjects/Blink/STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Blink.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
